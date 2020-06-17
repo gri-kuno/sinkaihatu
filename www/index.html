@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#first-page')) {
+          // ホームの動き 検索押したら２ページ目の検索
+        page.querySelector('#push-button1').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        
+        };
+
+      // if (page.matches('#first-page')) {
+      //     // ホームの動き 検索押したら２ページ目の検索
+      //   page.querySelector('#push-button2').onclick = function() {
+      //     document.querySelector('#navigator').pushPage('page3.html');
+        
+      //   };
+
+      } else if (page.matches('#second-page')) {
+          // 検索ページから クリエボタン押したら 3ページ目のクリエ
+        page.querySelector('#push-button2').onclick = function() {
+          document.querySelector('#navigator').pushPage('page3.html');
+        }
+      }
+    });
+
+    
+    // // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#first-page')) {
+          // ホームの動き クリエ押したら２ページ目のクリエ
+        page.querySelector('#push-button2').onclick = function() {
+          document.querySelector('#navigator').pushPage('page3.html');
+        
+        };
+
+      } else if (page.matches('#third-page')) {
+          // 検索ページから クリエボタン押したら 3ページ目のカフェ
+        page.querySelector('#push-button3').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        }
+      }
+    });
+
+    // // Page init event
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#first-page')) {
+          // ホームの動き カフェ押したら４ページのカフェ
+        page.querySelector('#push-button3').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        
+        };
+
+      } else if (page.matches('#fourth-page')) {
+          // 検索ページから クリエボタン押したら 3ページ目のカフェ
+        page.querySelector('#push-button3').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        }
+      }
+    });
+
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#first-page')) {
+          // ホームの動き カフェ押したら４ページのカフェ
+        page.querySelector('#push-button3').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        
+        };
+
+      } else if (page.matches('#fourth-page')) {
+          // 検索ページから クリエボタン押したら 3ページ目のカフェ
+        page.querySelector('#push-button0').onclick = function() {
+          document.querySelector('#navigator').pushPage('page1.html');
+        }
+      }
+    });
+
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#second-page')) {
+          // ホームの動き カフェ押したら４ページのカフェ
+        page.querySelector('#pop-button0').onclick = function() {
+          document.querySelector('#navigator').pushPage('page1.html');
+        
+        };
+
+      } else if (page.matches('#third-page')) {
+          // 検索ページから クリエボタン押したら 3ページ目のカフェ
+        page.querySelector('#push-button0').onclick = function() {
+          document.querySelector('#navigator').pushPage('page1.html');
+        }
+      }
+    });
+
+
+// // 検索ページの指示
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#second-page')) {
+          //  カフェ押したら４ページのカフェ
+        page.querySelector('#push-button3').onclick = function() {
+          document.querySelector('#navigator').pushPage('page4.html');
+        
+        };
+
+      } else if (page.matches('#fourth-page')) {
+          // 検索ページから クリエボタン押したら 3ページ目のカフェ
+        page.querySelector('#push-button2').onclick = function() {
+          document.querySelector('#navigator').pushPage('page3.html');
+        }
+      }
+    });
+
+// // 検索ページの指示
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#second-page')) {
+          //  カフェ押したら４ページのカフェ
+        page.querySelector('#push-button1').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        
+        };
+
+      } else if (page.matches('#third-page')) {
+          // 検索ページから クリエボタン押したら 3ページ目のカフェ
+        page.querySelector('#push-button1').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        }
+      }
+    });
+
+// // // カフェページの指示
+    document.addEventListener('init', function(event) {
+      var page = event.target;
+
+      if (page.matches('#fourth-page')) {
+          //  カフェ押したら４ページのカフェ
+        page.querySelector('#push-button1').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        
+        };
+
+      } else if (page.matches('#first-page')) {
+          // 検索ページから クリエボタン押したら 3ページ目のカフェ
+        page.querySelector('#push-button1').onclick = function() {
+          document.querySelector('#navigator').pushPage('page2.html');
+        }
+      }
+    });
+
+    
+
+    
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+
+ 
+</head>
+<body>
+  <!-- 1ページ目 -->
+  <ons-navigator id="navigator" page="page1.html"></ons-navigator>
+
+  <ons-template id="page1.html">
+    <ons-page id="first-page">
+      <ons-toolbar>
+        <div class="center">ホーム</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+        <ons-button id="push-button1">検索１</ons-button>
+        <ons-button id="push-button2">クリエ2</ons-button>
+        <ons-button id="push-button3">カフェ3</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<!-- ２ページ目 -->
+  <ons-template id="page2.html">
+    <ons-page id="second-page">
+      <ons-toolbar>
+        <div class="left"><ons-back-button>ホーム</ons-back-button></div>
+        <div class="center">検索</div>
+      </ons-toolbar>
+
+      <div class="content" style="text-align: center">
+    
+        <ons-button id="push-button2">クリエ2</ons-button>
+        <ons-button id="push-button3">カフェ3</ons-button>
+        <ons-button id="pop-button0">ホーム</ons-button>
+      </div>
+    </ons-page>
+  </ons-template>
+
+<!-- ３ページ目 -->
+  <ons-template id="page3.html">
+    <ons-page id="third-page">
+      <ons-toolbar>
+        <!-- <div class="left"><ons-back-button>検索</ons-back-button></div> -->
+        <div class="center">クリエイト</div>
+      </ons-toolbar>
+        
+      <div class="content" style="text-align: center">
+    
+        <ons-button id="push-button1">検索1</ons-button>
+        <ons-button id="push-button3">カフェ3</ons-button>
+        <ons-button id="push-button0">ホーム</ons-button>
+        </ons-button>
+    </ons-page>
+  </ons-template>
+
+<!-- ４ページ目 -->
+  <ons-template id="page4.html">
+    <ons-page id="fourth-page">
+      <ons-toolbar>
+        
+        <div class="center">cafe</div>
+      </ons-toolbar>
+        
+      <div class="content" style="text-align: center">
+        
+        <ons-button id="push-button1">検索1</ons-button>
+        <ons-button id="push-button2">クリエ2</ons-button>
+        <ons-button id="push-button0">ホーム</ons-button>
+        </ons-button>
+    </ons-page>
+  </ons-template>
+
+</body>
+</html>
