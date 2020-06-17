@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="components/loader.css">
+    <script src="components/loader.js"></script>
+    <script>
+        <style>
+          body { margin: 0; padding: 0; }
+          #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        </style>
+        </head>
+        <body>
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+        <link
+        rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+        type="text/css"
+        />
+        <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.js'></script>
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v3.1.1/mapbox-gl-directions.css' type='text/css' />
+
+        <div id="map"></div>
+        
+            <script>
+              // マップの取得
+              mapboxgl.accessToken = 'pk.eyJ1Ijoia3VubzciLCJhIjoiY2tiMXI3YmNjMDNrNjJ4cXBiZ3dobGJkeiJ9.dVO3NI9vrHwRiyMoliv57Q';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/kuno7/ckbg2uxxk356j1irveuz96pwf',
+              // 中心の場所
+            center: [139.767689,35.693996],
+            // ズームの度合
+            zoom: 16
+            });
+            
+            map.addControl(
+            new MapboxGeocoder({
+            accessToken: mapboxgl.accessToken,
+            mapboxgl: mapboxgl
+            })
+            );
+
+                  // ナビゲーションコントロール
+              map.addControl(
+                  new mapboxgl.NavigationControl(), 'bottom-right');
+
+              // 方向制御
+              map.addControl(
+                  new MapboxDirections({
+                      accessToken: mapboxgl.accessToken
+                  }), 'top-left');
+
+            </script>
+
+              <!-- 現在地の取得 -->
+              <script>
+                map.addControl(new mapboxgl.ScaleControl({     maxWidth: 300,     unit: 'metric' })); 
+              </script>
+              <script>
+                let gc = new mapboxgl.GeolocateControl({     positionOptions: {         enableHighAccuracy: false     },     fitBoundsOptions: {maxZoom: 16},     trackUserLocation: true,     showUserLocation: true }); map.addControl(gc, 'top-left'); 
+              </script>
+              <!-- 現在地の取得 -->
+ 
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
